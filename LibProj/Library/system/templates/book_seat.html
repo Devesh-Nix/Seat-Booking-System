@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specify character encoding -->
+    <meta charset="UTF-8">
+    <!-- Enable responsiveness for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="/static/css/seat.css">
+    <!-- Link to external JavaScript file with Django's static tag -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+    <!-- Title of the webpage -->
+    <title>Library Seat Booking</title>
+</head>
+<body>
+  <!-- Header section containing the title of the system -->
+  <header>
+    <h1>Library Seat Booking System</h1>
+  </header>
+  
+  <!-- Main container for the content -->
+  <div class="container">
+    <!-- Section for selecting a seat -->
+    <h2>Select a Seat</h2>
+    <!-- Seat grid where seats will be dynamically rendered by JavaScript -->
+    <div class="seat-grid" id="seatGrid"></div>
+
+    <!-- Section for selecting a time slot -->
+    <div class="slot-section">
+      <h3>Select a Time Slot</h3>
+      <!-- Container for time slot options -->
+      <div class="slots" id="slotContainer">
+        <!-- Each time slot is represented as a div with a data attribute -->
+        <div class="slot" data-slot="8am-4pm">8 AM - 4 PM</div>
+        <div class="slot" data-slot="4pm-12am">4 PM - 12 AM</div>
+        <div class="slot" data-slot="12am-8am">12 AM - 8 AM</div>
+      </div>
+    </div>
+
+    <!-- Section to display a summary of the booking -->
+    <div class="summary" id="summary">
+      <h3>Booking Summary</h3>
+      <!-- Placeholder paragraph for booking summary details -->
+      <p id="summaryContent">Select a seat to view details.</p>
+    </div>
+  </div>
+
+  <!-- Overlay for the popup form -->
+  <div class="overlay" id="overlay"></div>
+  
+  <!-- Popup form for booking details -->
+  <div class="popup-form" id="bookingForm">
+    <h3>Book Your Seat</h3>
+    <!-- Form group for the user's name -->
+    <div class="form-group">
+      <label for="userName">Name</label>
+      <input type="text" id="userName" required>
+    </div>
+    <!-- Form group for the user's contact number -->
+    <div class="form-group">
+      <label for="userContact">Contact Number</label>
+      <!-- Input field restricted to 10 digits -->
+      <input type="text" id="userContact" maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits." required>
+    </div>
+    <!-- Form group for the user's email ID -->
+    <div class="form-group">
+      <label for="userEmail">Email ID</label>
+      <input type="email" id="userEmail" required>
+    </div>
+    <!-- Form group for the last 4 digits of the user's Aadhaar -->
+    <div class="form-group">
+      <label for="userAadhaar">Last 4 Digits of Aadhaar</label>
+      <!-- Input field restricted to 4 digits -->
+      <input type="text" id="userAadhaar" maxlength="4" pattern="\d{4}" title="Please enter exactly the last 4 digits of your Aadhaar." required>
+    </div>
+    <!-- Button to submit the booking -->
+    <button class="button" id="submitBooking">Book</button>  
+    <!-- Clear Selection button -->
+    <button class="button" id="clearSelection">Clear Selection</button>
+  </div>
+  <!-- Search Bar for checking booked seats -->
+
+</body>
+</html>

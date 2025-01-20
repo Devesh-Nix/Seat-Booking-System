@@ -1,0 +1,246 @@
+/* General styling for the entire page */
+body {
+  font-family: Arial, sans-serif; /* Sets the font family */
+  margin: 10px; /* Adds margin around the body */
+  padding: 0; /* Removes padding */
+  background-color: #f4f4f4; /* Light gray background color */
+}
+
+/* Styling for the header section */
+header {
+  background-color: #333; /* Dark background */
+  color: white; /* White text color */
+  text-align: center; /* Center aligns text */
+  padding: 10px 0; /* Adds vertical padding */
+}
+
+/* Container styling for content layout */
+.container {
+  margin: 20px auto; /* Centers container with auto margin */
+  padding: 20px; /* Adds inner spacing */
+  max-width: 1200px; /* Sets maximum width */
+  background-color: white; /* White background */
+  border-radius: 10px; /* Rounds container corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Seat grid styling for arranging seats */
+.seat-grid {
+  display: grid; /* Defines grid layout */
+  grid-template-columns: repeat(10, 1fr); /* 10 columns of equal width */
+  gap: 10px; /* Spacing between grid items */
+}
+
+/* General styling for individual seats */
+.seat {
+  width: 50px; /* Fixed seat width */
+  height: 50px; /* Fixed seat height */
+  margin: 5px; /* Adds space around each seat */
+  display: inline-block; /* Makes seat an inline block */
+  text-align: center; /* Centers text horizontally */
+  line-height: 50px; /* Centers text vertically */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounds corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Sets font size */
+}
+
+/* Styling for not-selected seats */
+.seat.not-selected {
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Styling for booked seats */
+.seat.booked {
+  background-color: #ff4d4d; /* Red background for booked seats */
+  color: white; /* White text */
+  cursor: not-allowed; /* No pointer interaction */
+}
+
+/* Styling for selected seats */
+.seat.selected {
+  background-color: #4caf50; /* Green background for selected seats */
+  color: white; /* White text */
+}
+
+/* Summary section styling */
+.summary {
+  margin-top: 20px; /* Adds space above summary */
+  padding: 10px; /* Inner spacing */
+  border: 1px solid #ccc; /* Border for summary box */
+  border-radius: 5px; /* Rounds corners */
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Styling for labels in form groups */
+.form-group label {
+  display: block; /* Makes label a block element */
+  margin-bottom: 5px; /* Space below the label */
+}
+
+/* Input field styling */
+.form-group input {
+  width: 100%; /* Full width input fields */
+  padding: 8px; /* Inner padding */
+  border: 1px solid #ccc; /* Border around inputs */
+  border-radius: 5px; /* Rounds input corners */
+}
+
+/* Button styling */
+.button {
+  display: inline-block; /* Inline block button */
+  padding: 10px 20px; /* Inner padding */
+  color: white; /* White text color */
+  background-color: #4caf50; /* Green background */
+  text-align: center; /* Center text */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounds button corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Disabled button styling */
+.button:disabled {
+  background-color: #ccc; /* Gray background */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+/* Slot section styling */
+.slot-section {
+  margin-top: 20px; /* Adds space above the slot section */
+}
+
+/* Slot section heading styling */
+.slot-section h3 {
+  margin-bottom: 10px; /* Space below heading */
+}
+
+/* Styling for slot container */
+.slots {
+  display: flex; /* Flex layout for slots */
+  gap: 10px; /* Space between slots */
+}
+
+/* Individual slot styling */
+.slot {
+  padding: 10px; /* Inner padding */
+  border: 1px solid #ccc; /* Border for slot */
+  border-radius: 5px; /* Rounds slot corners */
+  text-align: center; /* Centers text */
+  cursor: pointer; /* Pointer cursor */
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Styling for selected slot */
+.slot.selected {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+}
+
+/* Popup form styling */
+.popup-form {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Exact centering */
+  background: white; /* White background */
+  padding: 20px; /* Inner padding */
+  border-radius: 10px; /* Rounds popup corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 1000; /* Higher stack level */
+}
+
+/* Active state for popup form */
+.popup-form.active {
+  display: block; /* Makes popup visible */
+}
+
+/* Overlay styling */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Covers entire screen */
+  top: 0; /* Aligns to top */
+  left: 0; /* Aligns to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Below popup */
+}
+
+/* Active state for overlay */
+.overlay.active {
+  display: block; /* Makes overlay visible */
+}
+
+/* Clear selection button styling */
+#clearSelection {
+  margin-top: 15px; /* Adds space above the button */
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  border: none; /* Removes border */
+  padding: 10px 20px; /* Inner padding */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 5px; /* Rounds button corners */
+  font-size: 16px; /* Larger font size */
+}
+
+/* Hover effect for clear selection button */
+#clearSelection:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Checkout button styling */
+.checkout-btn {
+  position: absolute; /* Positioned relative to parent */
+  background-color: #ff5555; /* Bright red background */
+  color: white; /* White text */
+  border: none; /* Removes border */
+  padding: 5px 10px; /* Inner padding */
+  cursor: pointer; /* Pointer cursor */
+  display: none; /* Hidden by default */
+}
+
+/* Hover effect for checkout button */
+.checkout-btn:hover {
+  background-color: #ff0000; /* Darker red on hover */
+}
+
+/* Highlighted element styling */
+.highlighted {
+  outline: 2px solid yellow; /* Yellow border for emphasis */
+}
+
+/* Modal popup styling */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Exact centering */
+  background-color: white; /* White background */
+  padding: 20px; /* Inner padding */
+  border: 1px solid #ccc; /* Light border */
+  z-index: 999; /* Above most elements */
+}
+
+/* Active modal popup styling */
+.popup.active {
+  display: block; /* Makes popup visible */
+}
+
+/* Checkout button styling inside modal */
+#checkoutButton {
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+}
+
+/* Close popup button styling */
+#closePopup {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+}
